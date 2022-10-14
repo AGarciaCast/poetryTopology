@@ -1,0 +1,71 @@
+import java.io.*;
+import java.util.*;
+
+//put all text from separate poems into one long "poem", deleting ******, poet, and titles
+public class MergePoems {
+	final static String SEPARATOR = "******";
+	//final static String POET = "Walt Whitman";
+	public static void main(String[] args) {
+		BufferedReader br ;
+		Vector<String> text;
+		if (args.length<1) {
+			System.out.println("usage: java MergePoems <filename.txt>");
+			return;
+		}
+
+		try {
+			br = new BufferedReader(new FileReader(args[0]));
+			text = new Vector<String>();
+			String ln ;
+			
+			//read in all lines of the input file
+			boolean blanksFlag=false;
+			int sepCnt = 2; //starts out w/ title, poet
+			text.add(new String("MERGED POEMS"));
+			text.add(new String("[POET(S)]"));
+			while ((ln=br.readLine()) != null) {
+				//trim END whitespace
+				while (ln.trim().length()>0 && ln.substring(ln.length()-1).trim().length() == 0) {
+					ln = ln.substring(0,ln.length()-1); //exclusive end index
+				}
+				
+				if (sepCnt>0) {
+					if (ln.trim().length()>0) {
+						sepCnt--;//skips title, author
+					}
+				}
+				else if (blanksFlag&&ln.trim().length()==0) { //do nothing
+					;
+				}
+				else if (ln.trim().length()==0) { //first blank line
+					text.add(new String(""));
+					blanksFlag = true;
+				}
+				else if (ln.equals(SEPARATOR)) {
+					sepCnt=2;
+					blanksFlag=false;
+					text.add(new String(""));
+				}
+				else {
+					text.add(ln);
+					blanksFlag = false;
+				}
+			}
+
+			br.close();
+
+			//write output
+			String foutname = args[0].substring(0,args[0].length()-4) + "_merged.txt";
+			BufferedWriter bw = new BufferedWriter(new FileWriter(foutname));
+			for (int i=0;i<text.size();i++) {
+				ln = (String)text.elementAt(i);
+				bw.write(ln);
+				bw.newLine();
+				System.out.println(ln);
+			}
+			bw.close();
+		} catch(Exception e) {
+			e.printStackTrace(System.out);
+		}
+	}
+}

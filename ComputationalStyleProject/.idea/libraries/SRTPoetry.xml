@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SRTPoetry">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/poems/SRTPoetry/SRTPoetry.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

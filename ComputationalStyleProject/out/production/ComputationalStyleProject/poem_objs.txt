@@ -1,0 +1,9 @@
+Author|Title|wordCount|nounFreq|adjectiveFreq|verbFreq|adverbFreq|prepositionFreq|conjunctionFreq|pronounFreq|interjectionFreq|pastParticipleFreq|otherFreq|numLines|avgLineLength
+A1|T1|1|1|0|0|0|0|0|0|0|0|0|0|0
+A2|T2|2|2|0|0|0|0|0|0|0|0|0|0|0
+A3|T3|3|3|0|0|0|0|0|0|0|0|0|0|0
+A4|T4|0|0|0|0|0|0|0|0|0|0|0|0|0
+A5|T5|5|5|0|0|0|0|0|0|0|0|0|0|0
+A6|T6|4|4|0|0|0|0|0|0|0|0|0|0|0
+A7|T7|6|6|0|0|0|0|0|0|0|0|0|0|0
+A8|T8|7|7|1|0|0|0|0|0|0|0|0|0|0

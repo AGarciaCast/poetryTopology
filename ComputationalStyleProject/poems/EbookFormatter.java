@@ -1,0 +1,179 @@
+/**This is a formatting application for .txt files that are converted
+*  from PDF eBooks from www.PoemHunter.com and is very specific
+*  to those files. The result is a .txt file that is usable by
+*  the American Poetry style analysis tool written by me, David Kaplan.
+*
+*  To convert PDF to .txt, use GMail: send the pdf, view as HTML, save to disk (.htm)
+*  run java AddBreaks, open in Word, save as .txt with line breaks, run EbookFormatter
+*[and extra spaces in Dickinson, not done]
+*  [Millay . lines] [Pound (after Li Po)]
+*/
+
+import java.io.*;
+import java.util.*;
+
+public class EbookFormatter {
+	final static String separator = "******";
+	final static String URL_FLAG = "www." ;
+	public static void main(String[] args) {
+		BufferedReader br ;
+		Vector<String> text;
+		if (args.length<2 || (args.length>=2 && !(args[0].indexOf(".txt")>=0))) {
+			System.out.println("usage: java EbookFormatter <filename.txt> <author>");
+			System.out.println(args[0].matches(args[1]));
+			return;
+		}
+		String author = args[1];
+		try {
+			br = new BufferedReader(new FileReader(args[0]));
+			text = new Vector<String>();
+			String ln ;
+			
+			//read in all lines of the input file
+			while ((ln=br.readLine()) != null) {
+				//trim END whitespace
+				while (ln.trim().length()>0 && ln.substring(ln.length()-1).trim().length() == 0) {
+					ln = ln.substring(0,ln.length()-1); //exclusive end index
+				}
+				text.add(ln);
+			}
+
+			br.close();
+
+			//delete lines until first poem starts
+			int j = 0;
+			while (j<text.size() && !(ln=(String)text.elementAt(j)).contains(URL_FLAG)) {
+				System.out.println("PRE-deleting " + text.remove(j));
+			}
+			if (j<text.size()) {
+				System.out.println("www.PoemHunter.com-deleting " + text.remove(j));
+			}
+			//and again for page #
+			if (j<text.size()) {
+				System.out.println("PAGE#-deleting " + text.remove(j));
+			}
+			System.out.println("j="+j); //should be 0
+
+			//replace $author with $separator, delete useless lines
+			//boolean marker = false, marker2 = false;
+			for (int i=j;i<text.size();i++) {
+				ln = (String)text.elementAt(i);
+				if (ln.equals(author)) {
+					text.set(i,new String(separator));
+					//marker = true;
+				}
+				else {
+					//regular line
+					continue;
+				}
+				//delete blank lines between sep and end of poem
+				i--;
+				while ((ln=(String)text.elementAt(i)).trim().length()<=0) {
+					i--;
+				}
+				i++; //one too far...
+				while (i<text.size() && !(ln=(String)text.elementAt(i)).equals(separator)) {
+					System.out.println("PRE-SEP-deleting "+text.remove(i));
+				}
+
+				//delete lines after $separator before www.poemhunter.com
+					//delete URL, line after URL, i.e. page#
+				i++; //skip separator line
+				while (i<text.size() && !(ln=(String)text.elementAt(i)).contains(URL_FLAG)) {
+					System.out.println("POST-SEP-PRE-www.PoemHunter.com-deleting "+text.remove(i));
+				}
+				if (i<text.size()) {
+					System.out.println("www.PH.com-deleting "+text.remove(i));
+				}
+				//and one for the page number, too
+				if (i<text.size()) {
+					System.out.println("PAGE#-deleting "+text.remove(i));
+				}
+				i--; //to counter i++ from for loop
+			}
+
+			//take out last two lines, ****** and blank
+			System.out.println("END-deleting "+text.remove(text.size()-1));
+
+			//after first line after $separator, ADD $author
+			text.add(1,author);
+			for (int i=0;i<text.size();i++) {
+				ln = (String)text.elementAt(i);
+				if (ln.equals(separator)) {
+					while ((ln=(String)text.elementAt(i+2)).trim().length()==0) {
+						text.remove(i+2); //blank line
+					}
+					text.add(i+2,author);
+					i++; //skip the added line
+				}
+			}
+
+			//search for www.PoemHunter.com's leftover, and delete line before and any more blanks; and line after
+			//if intentional line break before Page, not noticed; unless hardcode at one blank line?
+			//hard-coding ONE blank line
+			for (int i=0;i<text.size();i++) {
+				ln = (String)text.elementAt(i);
+				if (ln.contains(URL_FLAG)) {
+					System.out.println("www.PH.com-deleting "+text.remove(i-1));
+
+					//always >=1 blank line, and sometimes Page is Pa\nge, so look for the blank
+					while (i>0 && (ln=(String)text.elementAt(i)).trim().length()>0) {
+						i--;
+					}
+					//"extra" i-- captures the blank line
+					/*i = i - 2; //first blank line above non-blanks
+					while (i>0 && (ln=(String)text.elementAt(i)).trim().length()==0) {
+						i--;
+					}
+					i++;//otherwise go 1 line too far
+					*/
+
+					//actually delete those lines
+					while (!((String)text.remove(i)).contains(URL_FLAG)) {
+						;
+					}
+					//remove page # line after www.Po...; assumes >=1 line of numbers
+					//sometimes broken up into e.g. 10\n4
+					int oldi = i;
+					//while all digits, 4 or fewer per line (no >9999-page ebooks), non-blank
+					while (i<text.size() && (ln=(String)text.elementAt(i)).trim().length()<5 && (ln=(String)text.elementAt(i)).matches("^[0-9]+$")) {
+						i++;
+					}
+					i--;
+					while (i>=oldi) {
+						System.out.println("PAGE#-Deleting "+text.remove(i));
+						i--;
+					}
+					i--; //to counteract for-loop's i++
+				}
+			}
+
+			//write output
+			String foutname = args[0].substring(0,args[0].length()-4) + "_fmtd.txt";
+			BufferedWriter bw = new BufferedWriter(new FileWriter(foutname));
+			for (int i=0;i<text.size();i++) {
+				ln = (String)text.elementAt(i);
+				
+				//take out junk lines
+				if (ln.startsWith("Submitted by") || ln.startsWith("Anonymous submission")) {
+					continue ; //don't add this line
+				}
+				
+				//replace &mdash;
+				ln = ln.replace("&mdash;"," -- ");
+				
+				//take out line numbers
+				while (ln.trim().matches(".*[0-9]+$")) {
+					//System.out.println("line numbered?:"+ln);
+					ln = ln.substring(0,ln.length()-1);
+				}
+				bw.write(ln);
+				bw.newLine();
+				System.out.println(ln);
+			}
+			bw.close();
+		} catch(Exception e) {
+			e.printStackTrace(System.out);
+		}
+	}
+}

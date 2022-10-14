@@ -1,0 +1,62 @@
+--*don't* *highway's* *they've* *you're* *can't* are not recognized, but in dictionary--apostrophe trouble?
+--Make sure to use original capitalization for lookups (e.g. I'll not i'll)?
+--For hyphenated words: if not found, look up separately & combine
+e.g., pow-wow, earth-caked, 
+--Deal with 'd words like favor'd, anchor'd, etc.?
+
+she'd|?|?|?|SH IY1 D
+creased|?|?|?|K R IY1 S T
+it's|?|?|?|IH1 T S
+wakened|?|?|?|W EY1 K AH0 N D
+rove|?|?|?|R OW1 V
+roving|?|?|?|R OW1 V IH0 NG
+absently|?|?|?|AE1 B S AH0 N T L IY0
+respire|?|?|?|R IH0 S P AY1 R
+respired|?|?|?|R IH0 S P AY1 R
+respires|?|?|?|R IH0 S P AY1 ER0 Z
+respiring|?|?|?|R IH0 S P AY1 R IH0 NG
+uselessly|?|?|?|Y UW1 S L AH0 S L IY0
+steadying|?|?|?|S T EH1 D IY0 IH0 NG
+airshaft|?|?|?|EH1 R SH AE2 F T
+snooped|?|?|?|S N UW1 P T
+snoops|?|?|?|S N UW1 P S
+pooping|?|?|?|P UW1 P IH0 NG
+scuttles|?|?|?|S K AH1 T AH0 L Z
+truth's|?|?|?|T R UW1 TH S
+enwrapped|?|?|?|EH0 N R AE1 P T
+trivialest|?|?|?|T R IH1 V IY0 AH0 L AH0 S T
+enwritten|?|?|?|EH0 N R IH1 T AH0 N
+scintillate|?|?|?|S IH1 N T AH0 L EY2 T
+scintillates|?|?|?|S IH1 N T AH0 L EY2 T S
+scintillated|?|?|?|S IH1 N T AH0 L EY2 T AH0 D
+scintillating|?|?|?|S IH1 N T AH0 L EY2 T IH0 NG
+ventilates|?|?|?|V EH1 N T AH0 L EY2 T S
+beauty's|?|?|?|B Y UW1 T IY0 Z
+o'er|?|?|?|AO1 R:AO1 ER0
+e'er|?|?|?|EH1 R
+unchain|?|?|?|AH0 N CH EY1 N
+unchains|?|?|?|AH0 N CH EY1 N Z
+unchained|?|?|?|AH0 N CH EY1 N D
+unchaining|?|?|?|AH0 N CH EY1 N IH0 NG
+canopies|?|?|?|K AE1 N AH0 P IY0 Z
+laves|?|?|?|L EY1 V Z
+lovelier|?|?|?|L AH1 V L IY0 ER0
+loveliest|?|?|?|L AH1 V L IY0 EH0 S T
+loveliness|?|?|?|L AH1 V L IY0 N AH0 S
+honied|?|?|?|H AH1 N IY0 D
+deliriously|?|?|?|D AH0 L IH1 R IY0 AH0 S L IY0
+banqueting|?|?|?|B AE1 NG K W AH0 T IH0 NG
+roomer|?|?|?|R UW1 M ER0
+roomers|?|?|?|R UW1 M ER0 Z
+may|N|?|?|M EY1
+rose|n|N|?|R OW1 Z
+Mr.|C|N|?|M IH1 S T ER0
+Mrs.|C|N|?|M IH1 S AH0 Z
+Ms.|C|N|?|M IH1 Z
+cuz|?|?|?|K AH1 Z
+'s|?|?|?|Z:S:EH1 S
+s'|?|?|?|Z:S
+
+pow-wow|N|N|?|P AW1 W AW2
+i'm|?|?|?|AY1 M
+i'll|?|?|?|AY1 L

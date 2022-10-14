@@ -1,0 +1,6 @@
+Column 45: part of speech: Noun (N), Adj (J), Verb (V), Adv (A), Prep (R), Conj (C), Pronoun (U), Interjection (I), Past participle (P), other (O)
+Column 46: syntactic part of speech (N,J,V,O)
+
+Capitalization - can store only capitalized ones, do lookup (if contains...); Column 50
+
+word|cap|pos|synpos|phonemes1:phonemes2:*

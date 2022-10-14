@@ -1,0 +1,122 @@
+&|and
+to-day|today
+may-be|maybe
+ain't|is not
+anyone'll|anyone will
+anyone'd|anyone would
+aren't|are not
+betcha|bet you
+'cause|because
+c'mere|come here
+coulda|could have
+couldn't|could not
+could've|could have
+cuz|because
+didn't|did not
+doesn't|does not
+don't|do not
+dunno|do not know
+e'en|even
+e'er|ever
+'em|them
+everybody'd|everybody would
+everybody'll|everybody will
+everyone'd|everyone would
+everyone'll|everyone will
+'fore|before
+getcha|get you
+gimme|give me
+gonna|going to
+gotcha|got you
+gotta|got to
+hadn't|had not
+hafta|have to
+hasn't|has not
+haven't|have not
+he'd|he would
+he'll|he will
+he's|he is
+how'd|how did
+how's|how is
+how're|how are
+i'd|I would
+i'm|I am
+i'll|I will
+isn't|is not
+it'd|it would
+it'll|it will
+it's|it is
+i've|I have
+kinda|kind of
+lemme|let me
+let's|let us
+lite|light
+lotta|lot of
+lotsa|lots of
+mo'|more
+mustn't|must not
+must've|must have
+nite|night
+no'm|no ma'am
+o'er|over
+oughta|ought to
+outta|out of
+sez|says
+shan't|shall not
+sha'n't|shall not
+she'd|she would
+she'll|she will
+she's|she is
+shoulda|should have
+shouldn't|should not
+should've|should have
+sorta|sort of
+that's|that is
+there're|there are
+there's|there is
+they'd|they would
+they'll|they will
+they're|they are
+they've|they have
+'taint|it is not
+'tain't|it is not
+'till|until
+'tis|it is
+'twas|it was
+'twasnt|it was not
+'twasn't|it was not
+'twere|it were
+'twould|it would
+wa'n't|was not
+wanna|want to
+wasn't|was not
+watcha|what are you
+we'd|we would
+we'll|we will
+we're|we are
+we've|we have
+weren't|were not
+what're|what are
+what'd|what did
+what's|what is
+where'd|where did
+where's|where is
+who's|who is
+who're|who are
+who'd|who would
+who'll|who will
+who've|who have
+why's|why is
+why'd|why did
+why're|why are
+witcha|with you
+won't|will not
+woulda|would have
+wouldn't|would not
+y'all|you
+yall|you
+yes'm|yes ma'am
+you'd|you would
+you'll|you will
+you're|you are
+you've|you have

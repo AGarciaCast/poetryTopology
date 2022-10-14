@@ -1,0 +1,65 @@
+All people have to do is ftp to:
+
+		ftp.cs.cmu.edu
+
+Experience has shown that this address does not always
+work.  People who have trouble with it should try:
+
+		mulerry.srv.cs.cmu.edu
+
+If neither of these work (they are aliases and "point" to the
+same machine), people can try the ip address which is:
+
+		128.2.206.173
+
+Once the connection has been established, they should login
+with the userid anonymous and use their real userid and host
+as the password.  For example weide+@speech1.cs.cmu.edu.
+
+Once logged in, they can find your files in:
+
+	project/fgdata
+
+A transcript of what such a session might look like is enclosed
+below, just in case if might be useful to you.  Please let me know
+if you have any other questions.
+
+
+*****BEGIN TRANSCRIPT*****
+dwm% ftp ftp.cs.cmu.edu
+Connected to MULBERRY.SRV.CS.CMU.EDU.
+220 MULBERRY.SRV.CS.CMU.EDU FTP server (Version 4.105 of 10-Jul-90
+12:07) ready.
+Name (ftp.cs.cmu.edu:dwm): anonymous  
+331 Guest login ok, send username@node as password.
+Password:
+230-Filenames can not begin with "/.." .
+    Other than that, everything is ok.
+230 User anon logged in.
+ftp> ls project/fgdata
+200 PORT command successful.
+150 Opening data connection for ls (128.2.217.78,3191).
+AtisLib.tar
+Grammar.tar
+PhoenixLib.tar
+cmu-logs-fixed.tar.Z
+cmu_atis3_3rd_release.tar.Z
+typed.tar
+226 Transfer complete.
+remote: project/fgdata
+104 bytes received in 0.24 seconds (0.42 Kbytes/s)
+ftp> bin
+200 Type set to L 8.
+ftp> cd project/fgdata
+250 Directory path set to project/fgdata.
+ftp> get cmu_atis3_3rd_release.tar.Z
+200 PORT command successful.
+150 Opening data connection for cmu_atis3_3rd_release.tar.Z
+(128.2.217.78,3192) (249549 bytes).
+226 Transfer complete.
+local: cmu_atis3_3rd_release.tar.Z remote: cmu_atis3_3rd_release.tar.Z
+249549 bytes received in 7.8 seconds (31 Kbytes/s)
+ftp> quit
+221 Goodbye.
+dwm%
+*****END TRANSCRIPT*****

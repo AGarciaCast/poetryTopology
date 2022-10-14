@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: David M Kaplan
+Created-On: February 8, 2006
+Main-Class: PoetryStyleAnalyzer

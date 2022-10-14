@@ -1,0 +1,32 @@
+<html> 
+<head> 
+<title>American Poetry Style Analyzer</title> 
+</head> 
+<body bgcolor=#FFFFFF> 
+<h2>American Poetry Style Analyzer</h2>
+
+<applet archive="PoetryStyleAnalyzer.jar" code="PoetryStyleAnalyzer.class" width=1 height=1> Your browser does not currently have Java enabled. Please enable it and try again. 
+<PARAM name="PoemObjFilename" value=""> 
+<PARAM name="PoemFilename" value="../poems/SRTPoetry/Oxfordanthology_fmtd.txt">
+<PARAM name="weightsFile" value="../poems/SRTPoetry/weights_selective2.txt">
+<PARAM name="dictionaryFile" value="../Dictionaries/merged2.dct">
+<PARAM name="rulesFile" value="hepple/postag/resources/ruleset_1.txt">
+<PARAM name="lexiconFile" value="hepple/postag/resources/lexicon_all_1.txt">
+<PARAM name="contractionsFile" value="hepple/postag/resources/contractions.txt">
+</applet> 
+<br>
+(Please wait ~10 seconds for the program to load in 2 new windows)<br>
+<br>
+Files to download or view:<br>
+<a href="PoetryStyleAnalyzer.jar">PoetryStyleAnalyzer.jar</a> | The one file you need to download. This is an executable JAR file; simply double click it to run the program. This file can also be viewed with WinZip to extract resource files.<br>
+<a href="../poems/SRTPoetry/SRTPoetry.zip">SRTPoetry.zip</a> | A starter set of poetry files.<br>
+<a href="hepple/postag/resources/ruleset_1.txt">ruleset_1.txt</a> | Rules file for POS tagger (HepTag)<br>
+<a href="hepple/postag/resources/lexicon_all_1.txt">lexicon_all_1.txt</a> | Lexicon file for POS tagger (HepTag)<br>
+<a href="hepple/postag/resources/contractions.txt">contractions.txt</a> | Contractions file for use with POS tagger (HepTag)<br>
+<a href="../Dictionaries/merged2.dct">merged2.dct</a> | American English pronunciation dictionary from CMU (merged with MRC data)<br>
+<a href="../poems/SRTPoetry">SRTPoetry</a> (dir) | Directory with poem text files and weights files<br>
+<a href="GUI.java">GUI.java</a> | The main source code<br>
+<a href="PoetryStyleAnalyzer.java">PoetryStyleAnalyzer.java</a> | Wrapper JApplet/standalone code<br>
+Coming soon: links to helpful websites! (NIST-JAMA; CMU; Penn Treebank; HepTag; Stanford NLP; PCA; MDS)
+</body> 
+</html>
