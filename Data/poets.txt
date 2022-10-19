@@ -1,10 +1,1 @@
-https://poets.org/poet/william-wordsworth
-https://poets.org/poet/robert-frost
-https://poets.org/poet/john-keats
-https://poets.org/poet/emily-dickinson
-https://poets.org/poet/naomi-shihab-nye
-https://poets.org/poet/robert-frost
-https://poets.org/poet/langston-hughes
-https://poets.org/poet/walt-whitman
-https://poets.org/poet/william-shakespeare
-https://poets.org/poet/w-b-yeats
+https://poets.org/poet/e-e-cummings
