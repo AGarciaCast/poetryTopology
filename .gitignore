@@ -130,3 +130,4 @@ dmypy.json
 
 /Data/bert.npy
 /Data/fake_bert.npy
+/Data/logs_style.p
