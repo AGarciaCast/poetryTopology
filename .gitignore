@@ -130,4 +130,6 @@ dmypy.json
 
 /Data/bert.npy
 /Data/fake_bert.npy
+/Data/bert_perturb.npy
+/Data/tokens_perturb.p
 /Data/logs_style*.p
